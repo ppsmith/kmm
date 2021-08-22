@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:934698456867:android:e1da88e322f0f681c91e96",
         "android_client_info": {
-          "package_name": "com.phillip.kmm2"
+          "package_name": "com.phillip.kmm2.android"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "934698456867-dqek9qr7s7gcr83un6tk2i94t7luovef.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.phillip.kmm2",
+            "package_name": "com.phillip.kmm2.android",
             "certificate_hash": "324f7c2499238b61079d24f169711f65538ba2f4"
           }
         },

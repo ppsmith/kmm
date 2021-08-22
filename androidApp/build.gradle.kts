@@ -45,7 +45,7 @@ android {
     defaultConfig {
         applicationId = "com.phillip.kmm2.android"
         minSdkVersion(26)
-        targetSdkVersion(31)
+        targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
     }

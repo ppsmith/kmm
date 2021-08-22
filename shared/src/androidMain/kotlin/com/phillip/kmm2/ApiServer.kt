@@ -22,15 +22,15 @@ class ApiServer {
     }
 
 
-    suspend fun connectToGoogle(callback: (HttpResponse) -> Unit) {
-        val response = httpClient.request<HttpResponse> {
-            url("www.google.com")
-            method = HttpMethod.Get
-        }
-
-        if(response.status == HttpStatusCode.OK) {
-            callback(response)
-        }
-    }
+//    suspend fun connectToGoogle(callback: (HttpResponse) -> Unit) {
+//        val response = httpClient.request<HttpResponse> {
+//            url("www.google.com")
+//            method = HttpMethod.Get
+//        }
+//
+//        if(response.status == HttpStatusCode.OK) {
+//            callback(response)
+//        }
+//    }
 
 }

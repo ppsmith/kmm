@@ -23,7 +23,7 @@ class MainActivityViewModel: ViewModel() {
 
 
     suspend fun connectToGoogle() {
-        ApiServer().connectToGoogle()
+        //ApiServer().connectToGoogle(){}
     }
 
 }

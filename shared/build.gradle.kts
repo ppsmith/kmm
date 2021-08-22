@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.squareup.sqldelight")
-    //kotlin("serialization")
+    //id("kotlin-serialization")
 }
 
 sqldelight {
@@ -15,11 +15,11 @@ sqldelight {
 
 val coroutine_version = "1.3.2"
 val serializer_version = "1.2.2"
-val ktor_version = "1.2.5"
+val ktor_version = "1.6.2"
 val react_version = "16.9.0"
 val compose_version = "1.0.1"
 
-val sqldelight_version = "1.2.0"
+val sqldelight_version = "1.2.1"
 
 val support_library_version = "28.1.1"
 val constraint_layout_version = "1.1.0"
@@ -82,10 +82,10 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 //KTOR
-                implementation("io.ktor:ktor-client-core:1.0.0")
+                implementation("io.ktor:ktor-client-core:1.6.2")
 
                 //Local DB/Cache
-                implementation("com.squareup.sqldelight:runtime:$sqldelight_version")
+                //implementation("com.squareup.sqldelight:runtime:$sqldelight_version")
 
                 api("org.jetbrains.kotlin:kotlin-stdlib-common")
 
@@ -95,12 +95,12 @@ kotlin {
                 // MOKO - MVVM
                 implementation("dev.icerock.moko:mvvm-core:0.11.0")
 
-                // SERIALIZATION
-                //implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:1.0.0")
+                //SERIALIZATION
+                implementation("org.jetbrains.kotlin:kotlin-serialization:1.5.21")
 
                 // KODE IN
-                implementation("org.kodein.di:kodein-di-core:6.4.1")
-                implementation("org.kodein.di:kodein-di-erased:6.4.1")
+//                implementation("org.kodein.di:kodein-di-core:6.4.1")
+//                implementation("org.kodein.di:kodein-di-erased:6.4.1")
 
                 // FIRE STORE
                 implementation("co.touchlab:firestore:0.2.5")
@@ -112,12 +112,6 @@ kotlin {
                 implementation(kotlin("test-annotations-common"))
             }
         }
-//        val kotlin_version = "1.5.21"
-//        val coroutine_version = "1.0.0"
-//        val androidx_lifecycle_version = "1.0.0"
-//        val serializer_version = "1.0.0"
-//        val firebaseFireStoreVersion = "1.0.0"
-
 
         val androidMain by getting {
             dependencies {
@@ -153,7 +147,7 @@ kotlin {
         val iosMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-ios:$ktor_version")
-                implementation ("com.squareup.sqldelight:native-driver:$sqldelight_version")
+                implementation ("com.squareup.sqldelight:native-driver:1.5.0")
 
                 implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
 
@@ -161,7 +155,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutine_version")
 
                 // SERIALIZATION
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serializer_version")
+                //implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serializer_version")
             }
         }
         val iosTest by getting
